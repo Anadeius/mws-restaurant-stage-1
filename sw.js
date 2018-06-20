@@ -28,7 +28,7 @@ self.addEventListener('fetch', (event) => {
             event.respondWith(caches.match('/'));
             return;
         }
-        if (requestURL.pathname.startsWith('/img/')){
+        if (requestURL.pathname.startsWith('/images/')){
             event.respondWith(cachedImage(event.request));
             return;
         }
